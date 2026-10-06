@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f0e8">
+    <title>Tic Tac Toe | One more round</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topline">
+        <a class="wordmark" href="/" aria-label="Tic Tac Toe home">TTT<span>·</span></a>
+        <p class="edition">THE LITTLE STRATEGY GAME <span>NO. 01</span></p>
+        <button class="reset-button" id="reset-match" type="button" aria-label="Reset match">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3M4 4v4h4M4 13a8 8 0 0 0 14.9 3M20 20v-4h-4" /></svg>
+          <span>Reset match</span>
+        </button>
+      </header>
+
+      <section class="play-area" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> TWO PLAYERS · ONE BOARD</p>
+          <h1 id="page-title">Tic Tac <span>Toe.</span></h1>
+          <p class="subtitle">A tiny game of nerve and next moves.</p>
+        </div>
+
+        <div class="match-layout">
+          <section class="score-panel" aria-label="Match score">
+            <p class="panel-label">THE SCORE</p>
+            <div class="player-score is-current" id="score-x">
+              <span class="player-symbol symbol-x" aria-hidden="true">×</span>
+              <span class="player-name">PLAYER ONE</span>
+              <strong id="wins-x" aria-label="Player one wins">0</strong>
+            </div>
+            <div class="player-score" id="score-o">
+              <span class="player-symbol symbol-o" aria-hidden="true">○</span>
+              <span class="player-name">PLAYER TWO</span>
+              <strong id="wins-o" aria-label="Player two wins">0</strong>
+            </div>
+            <div class="draw-score">
+              <span>DRAWS</span>
+              <strong id="draws">0</strong>
+            </div>
+            <p class="score-note">First to three? Your call.</p>
+          </section>
+
+          <section class="board-panel" aria-label="Tic Tac Toe game">
+            <div class="game-status" aria-live="polite" aria-atomic="true">
+              <span class="status-dot" id="status-dot"></span>
+              <p id="game-status">Player One's turn</p>
+              <span class="round-label" id="round-label">ROUND 01</span>
+            </div>
+            <div class="board" id="board" role="group" aria-label="Game board">
+              <button class="square" type="button" data-index="0" aria-label="Top left, empty"></button>
+              <button class="square" type="button" data-index="1" aria-label="Top middle, empty"></button>
+              <button class="square" type="button" data-index="2" aria-label="Top right, empty"></button>
+              <button class="square" type="button" data-index="3" aria-label="Middle left, empty"></button>
+              <button class="square" type="button" data-index="4" aria-label="Center, empty"></button>
+              <button class="square" type="button" data-index="5" aria-label="Middle right, empty"></button>
+              <button class="square" type="button" data-index="6" aria-label="Bottom left, empty"></button>
+              <button class="square" type="button" data-index="7" aria-label="Bottom middle, empty"></button>
+              <button class="square" type="button" data-index="8" aria-label="Bottom right, empty"></button>
+            </div>
+            <div class="board-footer">
+              <span><i class="legend-x">×</i> GOES FIRST</span>
+              <button class="next-round" id="next-round" type="button">New round <span aria-hidden="true">↗</span></button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <span>THINK AHEAD. HAVE FUN.</span>
+        <span>GOOD GAMES ARE SHARED.</span>
+      </footer>
+    </main>
+  </body>
+</html>
