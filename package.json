@@ -1,0 +1,9 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A two-player Tic Tac Toe game served with Node.js.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
